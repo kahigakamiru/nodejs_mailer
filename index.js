@@ -23,10 +23,27 @@ const transporter = nodemailer.createTransport({
 
 transporter.sendMail({
      from: 'kahigandegwa2244@gmail.com',
-     to: 'labangichukimaina@gmail.com',
+     to: 'dancanmilgo73@gmail.com',
      subject: 'kugeria mani',
-     text: 'kesho naanzia hapa',
-    //  template: 'index'
+     html: `
+      <html>
+        <div style="width: 100%; height: auto; background-color: rgba(168, 50, 139, 0.3); border-radius: 5px; padding: 10px;">
+          <div style="margin: 20px;">
+            <h1 style="color: white;">Hello</h1>
+          </div>
+          <div style="margin: 20px; color: black; line-height: 1.6; font-size: 18px;">
+            <span>That class was Awesome, I learnt:</span><ul>
+                                                   <li>how to give access to gmail</li>
+                                                   <li>how to send emails in backend</li>
+                                                   <li>how to send to multiple people</li>    
+                                               </ul>
+            </div>
+        </div>
+      </html>
+    `,
+    attachments: [
+
+    ]
 
 }, (error, response) => {
     if(error)
